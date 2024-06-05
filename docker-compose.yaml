@@ -10,8 +10,7 @@ services:
       - /etc/letsencrypt/ssl/fullchain.pem:/etc/nginx/ssl/fullchain.pem
       - /etc/letsencrypt/ssl/privkey.pem:/etc/nginx/ssl/privkey.pem
     networks:
-      - chuntfm-liquidsoap_default
+      - chuntfm-liquidsoap
 
 networks:
-  chuntfm-liquidsoap_default:
-    external: true
+  chuntfm-liquidsoap:
