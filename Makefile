@@ -6,4 +6,4 @@ stop:
 	docker-compose down
 
 clean:
-	docker rmi nginx-reverse-proxy
+	docker rmi nginx:alpine
