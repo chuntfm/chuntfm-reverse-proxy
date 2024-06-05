@@ -11,3 +11,6 @@ services:
       - /etc/letsencrypt/ssl/privkey.pem:/etc/nginx/ssl/privkey.pem
     networks:
       - default
+
+networks:
+  - default
