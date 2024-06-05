@@ -1,10 +1,9 @@
 start:
-	@docker network inspect chuntfm-liquidsoap_default >/dev/null 2>&1 || docker network create chuntfm-liquidsoap_default
+	docker network create chuntfm-liquidsoap
 	docker-compose up -d
 
 stop:
 	docker-compose down
-	@docker network inspect chuntfm-liquidsoap_default --format '{{ json .Containers }}' | grep -q '{}' && docker network rm chuntfm-liquidsoap_default || true
-
+	docker network rm chuntfm-liquidsoap
 clean:
 	docker rmi nginx:alpine
