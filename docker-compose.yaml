@@ -14,3 +14,4 @@ services:
 
 networks:
   chuntfm-liquidsoap:
+    name: chuntfm-liquidsoap
