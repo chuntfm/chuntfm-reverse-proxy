@@ -9,6 +9,10 @@ start:
 
 stop:
 	docker-compose down
+
+restart:
+	docker-compose down
+	docker-compose up -d
 	
 clean:
 	docker rmi nginx:alpine
