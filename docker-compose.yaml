@@ -12,6 +12,8 @@ services:
       - /var/archive:/archive/:ro
     networks:
       - chuntfm-liquidsoap
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
 networks:
   chuntfm-liquidsoap:
     external: true

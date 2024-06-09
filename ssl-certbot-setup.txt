@@ -1,0 +1,23 @@
+on debian 12 bookworm:
+just to get the newest certbot
+
+sudo apt update
+sudo apt install snapd
+sudo snap install core
+sudo snap refresh core
+sudo snap install --classic certbot
+
+
+# Certbot:
+
+sudo certbot certonly --standalone -d fm.chunt.org
+
+sudo find / -type d -name "fm.chunt.org"
+
+# /etc/letsencrypt/live/fm.chunt.org
+# /etc/letsencrypt/archive/fm.chunt.org
+
+
+# copy both fullchain.pam and privkey.pem somehwere nginx can access them, fix permissions
+
+like /etc/nginx/ssl/fullchain.pem
