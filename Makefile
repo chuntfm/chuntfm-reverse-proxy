@@ -1,4 +1,9 @@
 start:
+    if [ ! -f .htpasswd ]; then \
+        echo -n 'admin:' >> .htpasswd; \
+        mkpasswd -m sha-512 admin >> .htpasswd; \
+    fi
+	
 	if [ -z "`docker network ls | grep chuntfm-liquidsoap`" ]; then \
 		docker network create chuntfm-liquidsoap; \
 	else \
