@@ -13,11 +13,11 @@ start:
 	fi
 
 	# check for archive directory shared between liquidsoap and nginx
-	if [ ! -d "~/chuntfm-archive" ]; then \
+	if [ ! -d ~/chuntfm-archive ]; then \
 		mkdir ~/chuntfm-archive; \
 	fi
 	# check for prerec directory shared between liquidsoap and nginx
-	if [ ! -d "~/chuntfm-prerec" ]; then \
+	if [ ! -d ~/chuntfm-prerec ]; then \
 		mkdir ~/chuntfm-prerec; \
 	fi
 	docker-compose up -d
